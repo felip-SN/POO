@@ -38,7 +38,7 @@ public class Aplic {
             opcao = scan.nextInt();
             
             if(opcao == 1){
-                System.out.println("O valor da area: " + objCir.calcArea() + " " + objCir.getUnidadeMedida());
+                System.out.println("O valor da area: " + objCir.calcArea() + " " + objCir.getUnidadeMedida() + "²");
             } else if (opcao == 2) {
                 System.out.println("O valor do perimetro: " + objCir.calcPerimetro() + " " + objCir.getUnidadeMedida());
             } else if (opcao == 3) {
