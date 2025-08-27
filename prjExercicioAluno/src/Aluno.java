@@ -50,14 +50,24 @@ public class Aluno {
     }
     
     public double calcMediaProva(){
-        return 0.75 * (ntPrv1 + 2 * ntPrv2)/3;
+        return 0.75 * ((ntPrv1 + 2 * ntPrv2)/3);
     }
     
     public double calcMediaTrab(){
-        return 0.25 * (ntTrab1 + ntTrab2)/2;
+        return 0.25 * ((ntTrab1 + ntTrab2)/2);
     }
     
     public double calcMediaFinal(){
         return calcMediaProva() + calcMediaTrab();
+    }
+    
+    public boolean isApproved(){
+//        if(calcMediaFinal() >= 5.0){
+//            return(true);
+//        } else {
+//            return(false);
+//        }
+
+        return (calcMediaFinal() >= 5.0);
     }
 }

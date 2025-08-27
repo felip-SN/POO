@@ -63,10 +63,17 @@ public class Aplic {
                 case 3:
                     System.out.println("RA: " + objAluno.getRA());
                     System.out.println("\tMédia dos final: " + objAluno.calcMediaFinal());
+
+                    if (objAluno.isApproved()) {
+                        System.out.println("\nAluno aprovado!");
+                    } else {
+                        System.out.println("\nAluno reprovado!");
+                    }
                     break;
-                default:
-                    System.out.println("Opção Invalida! Digite apenas numeros entre 1 e 3!");
-                    break;
+                case 4: break;
+                default: 
+                    System.out.println("\nDigite numeros entre 1 e 4!");
+                    continue;
             }
         } while (opcao != 4);
     }
