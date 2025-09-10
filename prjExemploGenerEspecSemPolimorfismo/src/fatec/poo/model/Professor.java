@@ -7,7 +7,7 @@ package fatec.poo.model;
 
 /**
  *
- * @author aluno
+ * @author Felipe
  */
 public class Professor extends Pessoa {
     private int regFuncional;

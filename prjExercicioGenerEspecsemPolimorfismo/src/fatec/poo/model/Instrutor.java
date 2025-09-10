@@ -8,10 +8,10 @@ public class Instrutor extends Pessoa {
     private int identificacao;
     private String areaAtuacao;
     
-    public Instrutor(int ident, String n, String t){
+    public Instrutor(int id, String n, String t){
         super(n,t);
         
-        identificacao = ident;
+        identificacao = id;
     }
     
     public void setAreaAtuacao(String atuacao){

@@ -29,8 +29,9 @@ public class Aplic {
         System.out.println("CPF: " + objCliente.getCpf());
         System.out.println("Nome: " + objCliente.getNome());
         System.out.println("Telefone: " + objCliente.getTelefone());
-        System.out.println("Peso: " + objCliente.getPeso());
-        System.out.println("Altura: " + objCliente.getAltura());
+        System.out.println("Peso: " + objCliente.getPeso() + "kg");
+        System.out.println("Altura: " + objCliente.getAltura() + "m");
+        System.out.println(objCliente.calcIMC());
     }
     
 }
