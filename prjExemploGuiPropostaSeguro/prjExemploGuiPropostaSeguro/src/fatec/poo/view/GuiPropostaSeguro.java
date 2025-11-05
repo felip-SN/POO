@@ -55,7 +55,7 @@ public class GuiPropostaSeguro extends javax.swing.JFrame {
         lblDescSexo = new javax.swing.JLabel();
         lblDescontoPerfil = new javax.swing.JLabel();
         lblValorSeguro = new javax.swing.JLabel();
-        btbMontar = new javax.swing.JButton();
+        btnMontar = new javax.swing.JButton();
         btnCalcular = new javax.swing.JButton();
         btnLimpar = new javax.swing.JButton();
         btnSair = new javax.swing.JButton();
@@ -211,11 +211,11 @@ public class GuiPropostaSeguro extends javax.swing.JFrame {
                 .addContainerGap(26, Short.MAX_VALUE))
         );
 
-        btbMontar.setText("Montar");
-        grpSexo.add(btbMontar);
-        btbMontar.addActionListener(new java.awt.event.ActionListener() {
+        btnMontar.setText("Montar");
+        grpSexo.add(btnMontar);
+        btnMontar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btbMontarActionPerformed(evt);
+                btnMontarActionPerformed(evt);
             }
         });
 
@@ -259,7 +259,7 @@ public class GuiPropostaSeguro extends javax.swing.JFrame {
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btbMontar)
+                .addComponent(btnMontar)
                 .addGap(18, 18, 18)
                 .addComponent(btnCalcular)
                 .addGap(18, 18, 18)
@@ -269,7 +269,7 @@ public class GuiPropostaSeguro extends javax.swing.JFrame {
                 .addGap(171, 171, 171))
         );
 
-        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {btbMontar, btnCalcular, btnLimpar, btnSair});
+        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {btnCalcular, btnLimpar, btnMontar, btnSair});
 
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -295,7 +295,7 @@ public class GuiPropostaSeguro extends javax.swing.JFrame {
                     .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btbMontar)
+                    .addComponent(btnMontar)
                     .addComponent(btnCalcular)
                     .addComponent(btnLimpar)
                     .addComponent(btnSair))
@@ -314,7 +314,7 @@ public class GuiPropostaSeguro extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_btnSairActionPerformed
 
-    private void btbMontarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btbMontarActionPerformed
+    private void btnMontarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMontarActionPerformed
         // TODO add your handling code here:
         objPropSeg = new PropostaSeguro(txtNome.getText(), Double.parseDouble(txtValorCarro.getText()));
         
@@ -323,7 +323,14 @@ public class GuiPropostaSeguro extends javax.swing.JFrame {
         } else {
             objPropSeg.setSexo(false);
         }
-    }//GEN-LAST:event_btbMontarActionPerformed
+        
+        objPropSeg.setFaixaIdade(cbxFaixaIdade.getSelectedIndex());
+        objPropSeg.setPerfilMotorista(chkUnicoMotorista.isSelected());
+        objPropSeg.setPerfilCidade(chkDirigirsoCidade.isSelected());
+        
+        btnMontar.setEnabled(false);
+        btnCalcular.setEnabled(true);
+    }//GEN-LAST:event_btnMontarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -363,9 +370,9 @@ public class GuiPropostaSeguro extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel asd;
     private javax.swing.JLabel asdadwq;
-    private javax.swing.JButton btbMontar;
     private javax.swing.JButton btnCalcular;
     private javax.swing.JButton btnLimpar;
+    private javax.swing.JButton btnMontar;
     private javax.swing.JButton btnSair;
     private javax.swing.JComboBox<String> cbxFaixaIdade;
     private javax.swing.JCheckBox chkDirigirsoCidade;
